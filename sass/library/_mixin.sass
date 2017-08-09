@@ -1,0 +1,48 @@
+$font-size:16px
+$page-bgcolor:#ececec
+$heavy-color:#2a2c33
+$main-color:#008dcf
+$match-color:#eb7e00
+$small-number:blue, red
+$done-button:#fb1a1a
+$page-lineheight: 22px
+
+@mixin link_style
+	background: #008dcf
+	color: #fff
+@mixin border_radius($angle) 
+	border-radius: $angle
+	-webkit-border-radius: $angle
+	-moz-border-radius: $angle
+	-o-border-radius: $angle
+	-ms-border-radius: $angle
+@mixin zoom($xsize,$ysize)
+	-moz-transform: scale($xsize, $ysize)
+	-webkit-transform: scale($xsize, $ysize)
+	-o-transform: scale($xsize, $ysize)
+	-ms-transform: scale($xsize, $ysize)
+	transform: scale($xsize, $ysize)
+@mixin soft($sec)
+	transition: all $sec
+@mixin pic($img,$repeat,$xsite,$ysite)
+	background: url(../../images/#{$img}) ($repeat) ($xsite) ($ysite)
+@mixin fontawesome ($name,$code)
+	#{$name}:before
+		font-family: FontAwesome
+		$withslash: "\"\\#{$code}\""
+		content: unquote($withslash)
+		@content
+
+/* --- */
+@mixin rwd($width)
+	@media only screen and (max-width: $width)
+		@content
+
+@mixin rwdmin($width)
+	@media only screen and (min-width: $width)
+		@content
+
+@mixin clear
+	content: ""
+	display: table
+	clear: both

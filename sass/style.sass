@@ -1,0 +1,67 @@
+@import "all"
+
+a
+	text-decoration: none
+body
+	background: #b1b5c5
+	box-sizing: border-box
+	font-size: 13px
+	#body-inner
+		margin: 0 auto
+		padding: 0 1% 1% 1%
+		width: 90%
+		background: #e3e3e3
+		.title
+			padding: 10px 0
+			text-align: center
+			border-bottom: #aaa 1px dashed
+			font-size: 20px
+		.choose_list
+			&:after
+				content: ""
+				clear: both
+				display: table
+			.choose-group
+				width: 50%
+				float: left
+			.choose
+				padding: 5px 0
+			.actions
+				ul li
+					display: inline
+		.rs-carousel
+			width: 100%
+			overflow: hidden
+			.rs-carousel-mask
+				border: 6px solid #444
+				ul li
+					color: #fff
+					font-size: 11em
+					text-align: center
+					width: 150px
+					height: 150px
+					display: inline-block
+					background: #aaa
+					&:nth-child(odd)
+						background: #ccc
+		ol.rs-carousel-pagination
+			margin-top: 5px
+			text-align: center
+			li
+				display: inline-block
+				padding: 5px
+				&:hover
+					background: #ccc
+				&:active, &.active
+					background: #ccc
+		a.rs-carousel-action
+			padding: 5px
+		.prev_next
+			margin-top: 10px
+			text-align: center
+			a
+				&:hover
+					background: #ccc
+				&:active, &.active
+					background: #ccc
+					display: inline-block

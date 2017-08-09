@@ -1,0 +1,110 @@
+/* --- */
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: #b1b5c5;
+  box-sizing: border-box;
+  font-size: 13px; }
+  body #body-inner {
+    margin: 0 auto;
+    padding: 0 1% 1% 1%;
+    width: 90%;
+    background: #e3e3e3; }
+    body #body-inner .title {
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: #aaa 1px dashed;
+      font-size: 20px; }
+    body #body-inner .choose_list:after {
+      content: "";
+      clear: both;
+      display: table; }
+    body #body-inner .choose_list .choose-group {
+      width: 50%;
+      float: left; }
+    body #body-inner .choose_list .choose {
+      padding: 5px 0; }
+    body #body-inner .choose_list .actions ul li {
+      display: inline; }
+    body #body-inner .rs-carousel {
+      width: 100%;
+      overflow: hidden; }
+      body #body-inner .rs-carousel .rs-carousel-mask {
+        border: 6px solid #444; }
+        body #body-inner .rs-carousel .rs-carousel-mask ul li {
+          color: #fff;
+          font-size: 11em;
+          text-align: center;
+          width: 150px;
+          height: 150px;
+          display: inline-block;
+          background: #aaa; }
+          body #body-inner .rs-carousel .rs-carousel-mask ul li:nth-child(odd) {
+            background: #ccc; }
+    body #body-inner ol.rs-carousel-pagination {
+      margin-top: 5px;
+      text-align: center; }
+      body #body-inner ol.rs-carousel-pagination li {
+        display: inline-block;
+        padding: 5px; }
+        body #body-inner ol.rs-carousel-pagination li:hover {
+          background: #ccc; }
+        body #body-inner ol.rs-carousel-pagination li:active, body #body-inner ol.rs-carousel-pagination li.active {
+          background: #ccc; }
+    body #body-inner a.rs-carousel-action {
+      padding: 5px; }
+    body #body-inner .prev_next {
+      margin-top: 10px;
+      text-align: center; }
+      body #body-inner .prev_next a:hover {
+        background: #ccc; }
+      body #body-inner .prev_next a:active, body #body-inner .prev_next a.active {
+        background: #ccc;
+        display: inline-block; }

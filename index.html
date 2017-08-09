@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery RS Carousel</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="body-inner">
+        <div class="title">jQuery RS Carousel</div>
+        <form class="choose_list">
+            <div class="choose-group left">
+                <div class="choose">
+                    <label for="orientation">方向:</label>
+                    <select name="orientation" id="orientation">
+                        <option value="horizontal" selected="selected">垂直</option>
+                        <option value="vertical">水平</option>
+                    </select>
+                </div>
+                <div class="choose">
+                    <label for="itemsPerTransition">物件切換數量:</label>
+                    <select name="itemsPerTransition" id="itemsPerTransition">
+                        <option value="auto" selected="selected">auto</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div class="choose">
+                    <label for="loop">循環:</label>
+                    <input type="checkbox" id="loop" name="loop">
+                </div>
+                <div class="choose">
+                    <label for="speed">速度:</label>
+                    <select id="speed" name="speed">
+                        <option value="slow">slow</option>
+                        <option value="normal" selected="selected">normal</option>
+                        <option value="fast">fast</option>
+                    </select>
+                </div>
+                <div class="choose">
+                    <label for="easing">easing:</label>
+                    <select id="easing" name="easing">
+                        <option value="swing" selected="selected">swing</option>
+                        <option value="linear">linear</option>
+                    </select>
+                </div>
+                <div class="choose">
+                    <label for="pagination">分頁:</label>
+                    <input type="checkbox" id="pagination" name="pagination" checked="checked">
+                </div>
+                <div class="choose">
+                    <label for="nextPrevActions">切換按鈕顯示:</label>
+                    <input type="checkbox" id="nextPrevActions" name="nextPrevActions" checked="checked">
+                </div>
+                <div class="choose">
+                    <label for="whitespace">尾末空白:</label>
+                    <input type="checkbox" id="whitespace" name="whitespace">
+                </div>
+            </div>
+            <!-- ./choose-group -->
+            <div class="choose-group right">
+                <div class="choose">
+                    <label for="autoScroll">自動輪播:</label>
+                    <input type="checkbox" id="autoScroll" name="autoScroll">
+                    <span>autoscroll is cancelled on hover</span>
+                </div>
+                <div class="choose">
+                    <label for="pause">停頓:</label>
+                    <select id="pause" name="pause">
+                        <option value="1000">1</option>
+                        <option value="2000" selected="selected">2</option>
+                        <option value="3000">3</option>
+                        <option value="4000">4</option>
+                        <option value="5000">5</option>
+                        <option value="6000">6</option>
+                        <option value="7000">7</option>
+                        <option value="8000">8</option>
+                    </select>
+                    <span>秒</span>
+                </div>
+                <div class="choose">
+                    <label for="continuous">連續:</label>
+                    <input type="checkbox" id="continuous" name="continuous">
+                </div>
+                <div class="choose">
+                    <input type="button" value="切換可變寬度" id="toggleVariableWidth">
+                </div>
+                <div class="choose">
+                    <label for="addItems">
+                        <button id="addItemsBtn">增加</button>
+                        <input type="text" name="addItems" id="addItems" value="4"> 個物件
+                    </label>
+                </div>
+                <div class="choose">
+                    <label for="removeItems">
+                        <button id="removeItemsBtn">減少</button>
+                        <input type="text" name="removeItems" id="removeItems" value="4"> 個物件
+                    </label>
+                </div>
+                <div id="itemCount" class="choose item-count">
+                    Total Items: <span class="count">19</span>
+                </div>
+                <div class="choose actions">
+                    <ul class="action-set base">
+                        <li class="action">
+                            <input type="button" id="init" name="init" value="集合">
+                        </li>
+                        <li class="action">
+                            <input type="button" id="destroy" name="destroy" value="展開">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ./choose-group -->
+        </form>
+        <div id="rs-carousel" class="module rs-carousel rs-carousel-horizontal">
+            <div class="rs-carousel-mask">
+                <ul class="rs-carousel-runner" style="width: 3200px; transform: translate3d(0px, 0px, 0px);">
+                    <li class="color-5 rs-carousel-item rs-carousel-item-active">0</li>
+                    <li class="color-2 rs-carousel-item rs-carousel-item-active">1</li>
+                    <li class="color-3 rs-carousel-item rs-carousel-item-active">2</li>
+                    <li class="color-1 rs-carousel-item rs-carousel-item-active">3</li>
+                    <li class="color-2 rs-carousel-item rs-carousel-item-active">4</li>
+                    <li class="color-4 rs-carousel-item">5</li>
+                    <li class="color-7 rs-carousel-item">6</li>
+                    <li class="color-5 rs-carousel-item">7</li>
+                    <li class="color-6 rs-carousel-item">8</li>
+                    <li class="color-1 rs-carousel-item">9</li>
+                    <li class="color-2 rs-carousel-item">10</li>
+                    <li class="color-3 rs-carousel-item">11</li>
+                    <li class="color-4 rs-carousel-item">12</li>
+                    <li class="color-3 rs-carousel-item">13</li>
+                    <li class="color-2 rs-carousel-item">14</li>
+                    <li class="color-3 rs-carousel-item">15</li>
+                    <li class="color-4 rs-carousel-item">16</li>
+                    <li class="color-2 rs-carousel-item">17</li>
+                    <li class="color-3 rs-carousel-item">18</li>
+                    <li class="color-1 rs-carousel-item">19</li>
+                </ul>
+            </div>
+            <ol class="rs-carousel-pagination">
+                <li class="rs-carousel-pagination-link active"><a href="#page-0">1</a></li>
+                <li class="rs-carousel-pagination-link "><a href="#page-1">2</a></li>
+                <li class="rs-carousel-pagination-link"><a href="#page-2">3</a></li>
+                <li class="rs-carousel-pagination-link"><a href="#page-3">4</a></li>
+            </ol>
+            <div class="prev_next">
+                <a href="#" class="rs-carousel-action rs-carousel-action-prev">Prev</a>
+                <a href="#" class="rs-carousel-action rs-carousel-action-next active">Next</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
